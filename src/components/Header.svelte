@@ -1,7 +1,8 @@
 <script>
+    import { base } from '$app/paths';
     let tabs = [
-        {name: 'Projects', href: '#projects'},
-        {name: 'About Me', href: '#about'}
+        {name: 'Projects', href: 'projects'},
+        {name: 'About Me', href: 'about'}
     ]
 </script>
 
@@ -11,7 +12,7 @@
     </h1>
     <div class="m-4">
         {#each tabs as tab,index}
-            <a class="duration-400 hover:text-violet-400 m-2" href={tab.href}>{tab.name}</a>
+            <a class="duration-400 hover:text-violet-400 m-2" href={`${base}/${tab.href}`}>{tab.name}</a>
         {/each}
         <button class="p-2 px-3 bg-white text-slate-950 rounded-full hover:bg-slate-200">Let's Connect</button>
     </div>
